@@ -5,10 +5,10 @@
 <%= render @post %>
 <%= render "posts/comments", post: @post %>
 
-<br>
-<br>
-
 <div>
+
+  <br>
+
   <%= link_to "Edit this post", edit_post_path(@post) %> |
   <%= link_to "Back to posts", posts_path %>
   
