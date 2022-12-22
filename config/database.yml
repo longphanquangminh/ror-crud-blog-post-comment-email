@@ -15,11 +15,14 @@
 # gem "pg"
 #
 default: &default
-  adapter: postgresql
-  encoding: unicode
-  # For details on connection pooling, see Rails configuration guide
-  # https://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  adapter: mysql2
+  host: localhost
+  username: root
+  password: 10tekdlbqaU@
+
+  # https://stackoverflow.com/questions/59639750/how-to-get-default-collation-in-rails
+  encoding: utf8mb4
+  collation: utf8mb4_unicode_ci
 
 development:
   <<: *default
